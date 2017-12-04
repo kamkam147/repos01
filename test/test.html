@@ -1,0 +1,36 @@
+<html>
+    <header>
+        <script type="text/javascript" src="test.js"></script>    
+    </header>
+    <body>
+        <h1>テストでごわす</h1>
+        <br>
+        <button type="button" onclick="testCall01()">ボタン１</button>
+        <button type="button" onclick="testCall02()">ボタン２</button>
+        <button type="button" onclick="quise()">ボタン３</button>
+        <br><br>
+
+        <script>
+            var str;
+            str = prompt("名前を教えてください。","風来の名無し");
+            if((str=="") || (str==null))
+            {
+                str="風来の名無し";
+            }
+            
+            //名前がtomoだったら専用ページにジャンプ
+            if(str=="tomo")
+            {
+                location.href="tomono.html";
+            }
+            
+            document.write("ようこそ！" + str + "さん！");
+            document.write('<br>');
+            //日付表示
+            hiduke();
+        </script>
+        <noscript>
+            JavaScriptはOFFです...
+        </noscript>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+<header>
+
+</header>
+<body>
+<h1>とも専用ページ</h1>
+
+<input type="button" name="link" value="飛べｳﾘｬ！！" onclick="jump()">
+<br>
+<form name="navi">
+<select name="content" onchange="selectNavi()">
+    <option>項目一覧</option>
+    <option>HOME</option>
+    <option>Java入門</option>
+    <option>さくさくHPづくり</option>
+</select>
+</form>
+
+<script>
+var jpURL = new Array
+(
+    "",
+    "http://pori2.net/",
+    "http://pori2.net/js/index.html",
+    "http://pori2.net/saku2/index.html"
+);
+
+function jump()
+{
+    location.href="test.html";
+}
+
+function selectNavi()
+{
+    var num;
+
+    num = document.navi.content.selectedIndex;
+    if(num!=0)
+    {
+        location.href=jpURL[num];
+    }
+}
+</script>
+
+</body>
+</html>
