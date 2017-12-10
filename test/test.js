@@ -1,8 +1,52 @@
+var jpURL = new Array
+(
+    "",
+    "http://pori2.net/",
+    "http://pori2.net/js/index.html",
+    "http://pori2.net/saku2/index.html"
+);
+
+function selectNavi()
+{
+    var num;
+
+    num = document.navi.content.selectedIndex;
+    if(num!=0)
+    {
+        location.href=jpURL[num];
+    }
+}
+
+function WriteNavi()
+{
+    document.write('<form name="navi">');
+    document.write('<select name="content" onchange="selectNavi()">');
+    document.write('<option>項目一覧</option>');
+    document.write('<option>HOME</option>');
+    document.write('<option>Java入門</option>');
+    document.write('<option>さくさくHPづくり</option>');
+    document.write('</select>');
+    document.write('</form>');
+}
+
 function testCall01()
 {
     var msg="関数が呼び出されました！！";
     alert(msg);
-
+    
+    var str;
+    str = prompt("名前を教えてください。","風来の名無し");
+    if((str=="") || (str==null))
+    {
+        str="風来の名無し";
+    }
+    
+    //名前がtomoだったら専用ページにジャンプ
+    if(str=="tomo")
+    {
+        location.href="tomono.html";
+    }
+    
     //別の関数も呼び出せるよ
     // testCall02();
 }
