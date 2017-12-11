@@ -1,34 +1,39 @@
 <html>
-<header>
-        <script type="text/javascript" src="test.js"></script>
-</header>
-<body>
-<h1>とも専用ページ</h1>
+    <header>
+            <script type="text/javascript" src="test.js"></script>
+    </header>
+    <body>
+        <script>
+            // WriteNavi();
 
-<input type="button" name="link" value="飛べｳﾘｬ！！" onclick="jump()">
-<br>
+            // var str = document.referrer;
+
+            // var sflg = str.indexOf("test.html",0);
+
+            // alert(str);
+
+            // if(sflg < 0)
+            // {
+            //     location.replace("test.html");
+            // }
+        </script>
+        <h1>ともの部屋</h1>
+        <button type="button" onclick="testCall01()">ボタン１</button>
+        <button type="button" onclick="testCall02()">ボタン２</button>
+        <button type="button" onclick="quise()">ボタン３</button>
+        <br><br>
+        <!--<input type="button" name="link" value="飛べｳﾘｬ！！" onclick="jump()">
+        <br>!-->
 
 
-<script>
-var str = document.referrer;
-if(str=="")
-{
-    location.href="test.html";
-}
+        <script>
+            WriteNavi();
 
-var sflg = str.indexOf("test.html",0);
-if(sflg < 0)
-{
-    location.replace("test.html");
-}
+            function jump()
+            {
+                location.href="test.html";
+            }
+        </script>
 
-WriteNavi();
-
-function jump()
-{
-    location.href="test.html";
-}
-</script>
-
-</body>
+    </body>
 </html>

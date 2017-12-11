@@ -3,13 +3,10 @@
         <script type="text/javascript" src="test.js"></script>    
     </header>
     <body>
-        <h1>テストでごわす</h1>
+        <a href="JavaScript:ifr('tomono.html')">HOMEへ</a>
         <br>
-        <button type="button" onclick="testCall01()">ボタン１</button>
-        <button type="button" onclick="testCall02()">ボタン２</button>
-        <button type="button" onclick="quise()">ボタン３</button>
-        <br><br>
 
+        <iframe src="tomono.html" name="waku" width="100%" height="80%"></iframe>
         <script>
             var str;
             str = prompt("名前を教えてください。","風来の名無し");
@@ -18,16 +15,20 @@
                 str="風来の名無し";
             }
             
-            //名前がtomoだったら専用ページにジャンプ
-            if(str=="tomo")
-            {
-                location.href="tomono.html";
-            }
+            // //名前がtomoだったら専用ページにジャンプ
+            // if(str=="tomo")
+            // {
+            //     location.href="tomono.html";
+            // }
             
             document.write("ようこそ！" + str + "さん！");
             document.write('<br>');
             //日付表示
             hiduke();
+
+            function ifr(jpURL){
+                waku.location = jpURL;
+            }
         </script>
         <noscript>
             JavaScriptはOFFです...

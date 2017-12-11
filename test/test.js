@@ -34,18 +34,18 @@ function testCall01()
     var msg="関数が呼び出されました！！";
     alert(msg);
     
-    var str;
-    str = prompt("名前を教えてください。","風来の名無し");
-    if((str=="") || (str==null))
-    {
-        str="風来の名無し";
-    }
+    // var str;
+    // str = prompt("名前を教えてください。","風来の名無し");
+    // if((str=="") || (str==null))
+    // {
+    //     str="風来の名無し";
+    // }
     
-    //名前がtomoだったら専用ページにジャンプ
-    if(str=="tomo")
-    {
-        location.href="tomono.html";
-    }
+    // //名前がtomoだったら専用ページにジャンプ
+    // if(str=="tomo")
+    // {
+    //     location.href="tomono.html";
+    // }
     
     //別の関数も呼び出せるよ
     // testCall02();
@@ -84,7 +84,7 @@ function testCall02()
             str="土曜日";
             break;
     }
-    document.write("今日は<strong>"+str+"</strong>ですね")
+    document.write("今日は<strong>"+str+"</strong>ですね");
 }
 
 function docWrite()
@@ -115,7 +115,7 @@ function docWrite()
         document.write('</tr>');
         rank++;      
     }
-    document.write('</table>')
+    document.write('</table>');
 }
 
 function hiduke()
@@ -159,7 +159,7 @@ function quise()
         }
     }
 
-    alert("あなたの点数は"+ten+"点でした！");
+    document.write("あなたの点数は"+ten+"点でした！");
 }
 
 
