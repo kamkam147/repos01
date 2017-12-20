@@ -3,10 +3,20 @@
         <script type="text/javascript" src="test.js"></script>    
     </header>
     <body>
+        <!-- 隠し属性 -->
+        <!-- <form name="kakusi">
+            <input type="hidden" name="shimeji" value="那須きのこ">
+            <input type="hidden" name="toku" value="てんてんてまり">
+        </form> -->
+        
         <a href="JavaScript:ifr('tomono.html')">HOMEへ</a>
-        <br>
-
-        <iframe src="tomono.html" name="waku" width="100%" height="80%"></iframe>
+        <form name="nameIn">
+            <input type="text" name="username" value="">
+            <input type="button" value="決定" onclick="viewName()">
+            <input type="button" value="クリア" onclick="clearName()">
+        </form>
+        <iframe src="tomono.html" name="waku" width="100%" height="75%"></iframe>
+        <div id="nameOut"></div>
         <script>
             var str;
             str = prompt("名前を教えてください。","風来の名無し");
@@ -20,14 +30,28 @@
             // {
             //     location.href="tomono.html";
             // }
+            // document.write("ようこそ！" + str + "さん！");
+            // document.write('<br>');
             
-            document.write("ようこそ！" + str + "さん！");
-            document.write('<br>');
-            //日付表示
-            hiduke();
+            //取得した名前を表示
+            var div=document.getElementById("nameOut");
+            div.textContent="ようこそ！"+str+"さん！";
 
+            //日付表示
+            hiduke(); 
+            
             function ifr(jpURL){
                 waku.location = jpURL;
+            }
+
+            function viewName(){
+                var sName=document.nameIn.username.value;
+                var div=document.getElementById("nameOut");
+                div.textContent="ようこそ！"+sName+"さん！";
+            }
+
+            function clearName(){
+                document.nameIn.username.value="";
             }
         </script>
         <noscript>

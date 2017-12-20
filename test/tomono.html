@@ -21,6 +21,7 @@
         <button type="button" onclick="testCall01()">ボタン１</button>
         <button type="button" onclick="testCall02()">ボタン２</button>
         <button type="button" onclick="quise()">ボタン３</button>
+        <button type="button" onclick="winOpen('http://pori2.net/js/index.html')">ボタン4</button>        
         <br><br>
         <!--<input type="button" name="link" value="飛べｳﾘｬ！！" onclick="jump()">
         <br>!-->
@@ -28,6 +29,15 @@
 
         <script>
             WriteNavi();
+
+            document.write("<br>");
+            var test = window.opener.document.kakusi.shimeji.value;
+            document.write(test+"です。");
+
+            function winOpen(jpURL)
+            {
+                window.open(jpURL,"sub","width=640,height=480,top=0,left=0");
+            }
 
             function jump()
             {
